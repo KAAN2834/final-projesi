@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiyatTakip - Giriş / Kayıt</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<script src="auth.js"></script>
+<body>
+    <div class="auth-container">
+        
+        <div class="auth-sidebar">
+            <div class="logo">📈 FiyatTakip</div>
+            <h1>Bütçeni korumaya <br> hazır mısın?</h1>
+            <p>Ürünlerini listene ekle, fiyat düştüğünde anında haberdar ol.</p>
+        </div>
+
+        
+        <div class="auth-content">
+            
+            <div class="auth-card" id="loginForm">
+                <h2>Hoş Geldin!</h2>
+                <p>Lütfen hesabına giriş yap.</p>
+                <form>
+                    <div class="form-group">
+                        <label>E-posta</label>
+                        <input type="email" placeholder="örnek@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Giriş Yap</button>
+                </form>
+                <p class="switch-text">Hesabın yok mu? <a href="#" onclick="toggleAuth()">Kayıt Ol</a></p>
+            </div>
+
+            
+            <div class="auth-card hidden" id="registerForm">
+                <h2>Hesap Oluştur</h2>
+                <p>Ücretsiz üye ol ve takibe başla.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Ad Soyad</label>
+                        <input type="text" placeholder="Ali Kaan" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-posta</label>
+                        <input type="email" placeholder="örnek@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="tel" placeholder="05XX XXX XX XX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-btn register">Üye Ol</button>
+                </form>
+                <p class="switch-text">Zaten üye misin? <a href="#" onclick="toggleAuth()">Giriş Yap</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function toggleAuth() {
+            document.getElementById('loginForm').classList.toggle('hidden');
+            document.getElementById('registerForm').classList.toggle('hidden');
+        }
+    </script>
+    
+    
+    <script src="auth.js"></script>
+</body>
+</html>
